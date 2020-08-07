@@ -20,13 +20,12 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-  
+    workingDir: './CientApp'
 
 - task: Npm@1
   inputs:
     command: 'custom'
-   
-    customCommand: 'run build'
+    workingDir: './Clientapp'
 
 
 - task: PublishBuildArtifacts@1
