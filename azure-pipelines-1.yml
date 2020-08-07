@@ -20,12 +20,12 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: 'clientapp'
+    workingDir: 'app'
 
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: 'clientapp'
+    workingDir: 'app'
     customCommand: 'run build'
 
 
