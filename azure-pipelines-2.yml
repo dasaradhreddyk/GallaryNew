@@ -19,10 +19,10 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '$Build.SourcesDirectory/Gallary'
+    workingDir: '$Build.SourcesDirectory'
 
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: '$Build.SourcesDirectory/Gallary'
+    workingDir: '$Build.SourcesDirectory'
     customCommand: 'run build'
