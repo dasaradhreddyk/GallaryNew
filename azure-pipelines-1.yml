@@ -20,12 +20,12 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: 'src/ClientApp'
+    workingDir: '$(buildConfiguration)/ClientApp'
 
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: 'src/Clientapp'
+    workingDir: '$(buildConfiguration)/Clientapp'
 
 
 - task: PublishBuildArtifacts@1
