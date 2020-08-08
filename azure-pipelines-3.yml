@@ -19,17 +19,17 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '$(Build.SourcesDirectory)/gallary/Clientapp/'
+    workingDir: '$(Build.SourcesDirectory)/Gallary'
 
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: '$(Build.SourcesDirectory)/gallary/Clientapp/'
+    workingDir: '$(Build.SourcesDirectory)/Gallary'
     customCommand: 'run buid'
 
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'Gallary/Clientapp/,dist/web'
+    PathtoPublish: '$(Build.SourcesDirectory)/Gallary/Clientapp/,dist/web'
     ArtifactName: 'drop'
     publishLocation: 'Container'
