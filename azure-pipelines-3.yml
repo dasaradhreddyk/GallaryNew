@@ -27,6 +27,10 @@ steps:
     workingDir: '$(Build.SourcesDirectory)/Gallary'
     customCommand: 'run build --output-path=\".dist/web\"'
 
+- task: CopyFiles@2
+  inputs:
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
